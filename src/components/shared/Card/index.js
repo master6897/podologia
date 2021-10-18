@@ -12,6 +12,8 @@ const StyledContainer = styled.section`
     padding: 2em;
     height: 30vh;
     overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: hidden;
     margin: 2em 0;
     transition: 0.3s ease;
     &:hover{
