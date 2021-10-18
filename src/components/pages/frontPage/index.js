@@ -27,7 +27,6 @@ const StyledArticle = styled.article`
     display: flex;
     flex-direction: column;
     width: 30%;
-    height: 80%;
     padding: 0 1em;
     @media (max-width: 991.98px){
         width: 70%;
