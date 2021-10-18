@@ -1,0 +1,28 @@
+.slide-container{
+    width:25%;
+    height: auto;
+}
+
+.each-slide > div {
+    background-size: cover;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .each-slide span {
+    padding: 20px 0;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .each-slide{
+      padding: 2em;
+  }
+
+  .each-slide >div img{
+      object-fit: contain;
+      width: 100%;
+  }
