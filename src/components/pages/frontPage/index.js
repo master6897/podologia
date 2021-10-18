@@ -31,6 +31,7 @@ const StyledArticle = styled.article`
     padding: 0 1em;
     @media (max-width: 991.98px){
         width: 70%;
+        padding: 0;
     }
     ${props => props.picture && css`
         width: 40%;
@@ -56,6 +57,9 @@ const StyledLink = styled.a`
     text-decoration: none;
     color: #D41e83;
 `;
+const StyledImg = styled.img`
+    width: 100%;
+`;
 
 class FrontPage extends React.Component{
     render(){
@@ -68,7 +72,7 @@ class FrontPage extends React.Component{
                         <Button name="Umów wizytę!" link="/contact"></Button>
                     </StyledArticle>
                     <StyledArticle picture>
-                        <img src={Noga} alt="noga"></img>
+                        <StyledImg src={Noga} alt="noga"></StyledImg>
                         <StyledLink href='https://www.freepik.com/vectors/woman'>Woman vector created by pch.vector - www.freepik.com</StyledLink>
                     </StyledArticle>
                 </StyledSection>
