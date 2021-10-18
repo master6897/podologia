@@ -57,6 +57,7 @@ const StyledLogo = styled.div`
         & > img{
             width: 10%;
             @media (max-width: 991.98px){
+                width: 10%;
                 margin-right: 1rem;
             }
         }
