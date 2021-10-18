@@ -34,6 +34,9 @@ const StyledDiv = styled.div`
     ${props => props.menu && css`
         font-weight: 600;
     `};
+    @media (max-width: 991.98px){
+        width: auto;
+    }
 `;
 export const StyledNavLink = styled(NavLink)`
 &.${props => props.activeClassName}{
@@ -80,7 +83,7 @@ const StyledH3 = styled.h3`
 const StyledImg = styled.img`
          width: 10%;
          @media (max-width: 991.98px){
-             width: auto;
+             width: 20%;
          }
 `
 
