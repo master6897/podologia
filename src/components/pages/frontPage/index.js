@@ -35,6 +35,9 @@ const StyledArticle = styled.article`
     ${props => props.picture && css`
         width: 40%;
     `};
+    ${props => props.margin && css`
+        margin-bottom: 2em;    
+    `}
 `;
 const StyledH1 = styled.h1`
     color: white;
@@ -59,7 +62,7 @@ class FrontPage extends React.Component{
         return(
             <Container>
                 <StyledSection>
-                    <StyledArticle>
+                    <StyledArticle margin>
                         <StyledH1>Zadbaj ze mną o zdrowie swoich stóp!</StyledH1>
                         <StyledParagraph>Regularne wizyty w gabinecie podologicznym zmniejszają ryzyko poważnych dolegliwości</StyledParagraph>
                         <Button name="Umów wizytę!" link="/contact"></Button>
