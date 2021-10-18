@@ -15,6 +15,9 @@ const Container = styled.section`
         padding: 0;
         margin: 0;
         width: 100%;
+        & > svg{
+            width:100%;
+        }
     `}
 `;
 const StyledSection = styled.section`
