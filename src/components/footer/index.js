@@ -35,7 +35,7 @@ const StyledDiv = styled.div`
         font-weight: 600;
     `};
     @media (max-width: 991.98px){
-        width: 100%;
+        width: 80%;
     }
 `;
 export const StyledNavLink = styled(NavLink)`

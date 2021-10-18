@@ -20,6 +20,7 @@ const Nav = styled.nav`
         color: white;
         font-weight: 600;
         z-index: 1000;
+        box-sizing: border-box;
         ${props => props.scrolled && css`
             height: 10vh;
         `}
