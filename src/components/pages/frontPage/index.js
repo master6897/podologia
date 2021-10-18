@@ -31,7 +31,6 @@ const StyledArticle = styled.article`
     padding: 0 1em;
     @media (max-width: 991.98px){
         width: 70%;
-        margin-bottom: 2rem;
     }
     ${props => props.picture && css`
         width: 40%;
