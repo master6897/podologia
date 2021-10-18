@@ -11,6 +11,11 @@ const Container = styled.section`
     justify-content: center;
     align-items:center;
     width: 100%;
+    ${props => props.svg && css`
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    `}
 `;
 const StyledSection = styled.section`
     display: flex;
@@ -64,7 +69,7 @@ class FrontPage extends React.Component{
         return(
             <Container>
                 <StyledSection>
-                    <StyledArticle>
+                    <StyledArticle margin>
                         <StyledH1>Zadbaj ze mną o zdrowie swoich stóp!</StyledH1>
                         <StyledParagraph>Regularne wizyty w gabinecie podologicznym zmniejszają ryzyko poważnych dolegliwości</StyledParagraph>
                         <Button name="Umów wizytę!" link="/contact"></Button>
@@ -74,7 +79,9 @@ class FrontPage extends React.Component{
                         <StyledLink href='https://www.freepik.com/vectors/woman'>Woman vector created by pch.vector - www.freepik.com</StyledLink>
                     </StyledArticle>
                 </StyledSection>
-                <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 1440 320"><path fill="#000b76" fill-opacity="1" d="M0,96L30,85.3C60,75,120,53,180,53.3C240,53,300,75,360,85.3C420,96,480,96,540,106.7C600,117,660,139,720,133.3C780,128,840,96,900,74.7C960,53,1020,43,1080,53.3C1140,64,1200,96,1260,106.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+                <Container svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" overflow="visible" viewBox="0 0 1440 320"><path fill="#000b76" fill-opacity="1" d="M0,96L30,85.3C60,75,120,53,180,53.3C240,53,300,75,360,85.3C420,96,480,96,540,106.7C600,117,660,139,720,133.3C780,128,840,96,900,74.7C960,53,1020,43,1080,53.3C1140,64,1200,96,1260,106.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
+                </Container>
             </Container>
         );
     }
