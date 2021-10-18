@@ -64,7 +64,7 @@ class FrontPage extends React.Component{
         return(
             <Container>
                 <StyledSection>
-                    <StyledArticle margin>
+                    <StyledArticle>
                         <StyledH1>Zadbaj ze mną o zdrowie swoich stóp!</StyledH1>
                         <StyledParagraph>Regularne wizyty w gabinecie podologicznym zmniejszają ryzyko poważnych dolegliwości</StyledParagraph>
                         <Button name="Umów wizytę!" link="/contact"></Button>
