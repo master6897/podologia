@@ -73,7 +73,7 @@ const Input = styled.input.attrs({
       transform: scale(1.05);
   }
   @media (max-width: 991.98px){
-      width: 80%;
+      width: 80% !important;
   }
   `
 export const ContactUs = () => {
