@@ -83,7 +83,7 @@ const StyledH3 = styled.h3`
 const StyledImg = styled.img`
          width: 20% !important;
          @media (max-width: 991.98px){
-             width: 20% !important;
+             width: 10% !important;
          }
 `
 
