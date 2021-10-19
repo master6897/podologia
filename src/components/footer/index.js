@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
 
 const StyledDiv = styled.div`
     width: 25% !important;
-    padding: 2em !important;
+    padding: 2em;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-around !important;
@@ -35,6 +35,7 @@ const StyledDiv = styled.div`
     `};
     @media (max-width: 991.98px){
         width: 80% !important;
+        padding: 0;
     }
 `;
 export const StyledNavLink = styled(NavLink)`
