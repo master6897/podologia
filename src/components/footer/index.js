@@ -16,6 +16,7 @@ const StyledFooter = styled.footer`
     margin-top: 3em;
     @media (max-width: 991.98px){
         flex-direction: column;
+        padding: 2em 0;
     }
 `;
 
