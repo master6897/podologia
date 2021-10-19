@@ -20,13 +20,13 @@ const StyledFooter = styled.footer`
 `;
 
 const StyledDiv = styled.div`
-    width: 25%;
-    padding: 2em;
-    display: flex;
+    width: 25% !important;
+    padding: 2em !important;
+    display: flex !important;
     height: 100%;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+    align-items: center !important;
     ${props => props.social && css`
         flex-direction: row;
         margin-top: 1em;
@@ -35,7 +35,7 @@ const StyledDiv = styled.div`
         font-weight: 600;
     `};
     @media (max-width: 991.98px){
-        width: 80%;
+        width: 80% !important;
     }
 `;
 export const StyledNavLink = styled(NavLink)`

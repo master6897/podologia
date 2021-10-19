@@ -12,11 +12,11 @@ const Container = styled.section`
     align-items:center;
     width: 100%;
     ${props => props.svg && css`
-        padding: 0;
-        margin: 0;
-        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
         & > svg{
-            width:100%;
+            width:100% !important;
         }
     `}
 `;
