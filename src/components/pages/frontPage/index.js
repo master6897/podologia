@@ -15,6 +15,7 @@ const Container = styled.section`
         padding: 0 !important;
         margin: 0 !important;
         width: 100% !important;
+        display: block !important;
         & > svg{
             width:100% !important;
             @media (max-width: 991.98px){
