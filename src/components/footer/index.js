@@ -23,7 +23,6 @@ const StyledDiv = styled.div`
     width: 25% !important;
     padding: 2em !important;
     display: flex !important;
-    height: 100%;
     flex-direction: column !important;
     justify-content: space-around !important;
     align-items: center !important;
@@ -83,7 +82,7 @@ const StyledH3 = styled.h3`
 const StyledImg = styled.img`
          width: 20% !important;
          @media (max-width: 991.98px){
-             width: 40% !important;
+             width: 20% !important;
          }
 `
 
@@ -92,7 +91,7 @@ class Footer extends React.Component{
         return(
             <StyledFooter>
                 <StyledDiv>
-                    <StyledImg src={stopki} alt="logo"></StyledImg>
+                    <StyledImg src={stopki} width="20%" alt="logo"></StyledImg>
                     <h1>Wioleta Dzięgelewska</h1>
                 </StyledDiv>
                 <StyledDiv>
