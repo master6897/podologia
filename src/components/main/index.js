@@ -17,9 +17,9 @@ import Portfolio from "../pages/portfolio";
 function App() {
   let [isScrolled, setScroll] = useState(false);
     window.onscroll = () =>{
-    if(window.scrollY > 500){
+    if(window.scrollY > 100){
       setScroll(true);
-    }else if(window.scrollY <=500){
+    }else if(window.scrollY <=100){
       setScroll(false);
     }
   }
