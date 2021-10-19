@@ -93,10 +93,10 @@ export const ContactUs = () => {
         return(
             <StyledForm ref={form} onSubmit={sendEmail} id='form'>
                 <h1>Kontakt E-mail</h1>
-                <StyledInput type="text" placeholder="Imię" name="user_name"></StyledInput>
-                <StyledInput type="text" placeholder="Nazwisko" name="user_surname"></StyledInput>
-                <StyledInput type="email" placeholder="Email" name="user_email"></StyledInput>
-                <StyledTextarea rows="10" cols="50" placeholder="Wiadomość" name="message"></StyledTextarea>
+                <StyledInput type="text" placeholder="Imię" name="user_name" required></StyledInput>
+                <StyledInput type="text" placeholder="Nazwisko" name="user_surname" required></StyledInput>
+                <StyledInput type="email" placeholder="Email" name="user_email" required></StyledInput>
+                <StyledTextarea rows="10" cols="50" placeholder="Wiadomość" name="message" required></StyledTextarea>
                 <Input/>
             </StyledForm>
         );
