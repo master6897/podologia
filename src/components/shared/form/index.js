@@ -54,18 +54,18 @@ const Input = styled.input.attrs({
     type: 'submit',
     value: 'Wyślij'
   })`
-  background-color:#D41e83;
-  border-radius:28px;
+  background-color:#D41e83 !important;
+  border-radius:28px !important;
   display:inline-block;
   cursor:pointer;
-  color:#ffffff;
+  color:#ffffff !important;
   font-family:Arial;
-  font-size:17px;
-  margin-top:1em;
-  padding:16px 31px;
+  font-size:17px !important;
+  margin-top:1em !important;
+  padding:16px 31px !important;
   text-decoration:none;
-  text-shadow:0px 1px 0px #2f6627;
-  width: 30%;
+  text-shadow:0px 1px 0px #2f6627 !important;
+  width: 30% !important;
   outline: none;
   transition: 0.3s ease;
   border:none;
