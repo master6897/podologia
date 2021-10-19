@@ -27,6 +27,12 @@ const StyledDiv = styled.div`
     flex-direction: column !important;
     justify-content: space-around !important;
     align-items: center !important;
+    & > img{
+        width: 10%;
+        @media (max-width: 991.98px){
+            width: 10%;
+        }
+    }
     ${props => props.social && css`
         flex-direction: row;
         margin-top: 1em;
@@ -92,7 +98,7 @@ class Footer extends React.Component{
         return(
             <StyledFooter>
                 <StyledDiv>
-                    <StyledImg src={stopki} alt="logo"></StyledImg>
+                    <img src={stopki} alt="logo"></img>
                     <h1>Wioleta Dzięgelewska</h1>
                 </StyledDiv>
                 <StyledDiv>
