@@ -29,6 +29,7 @@ const StyledSVG = styled.svg`
     display: block !important;
     @media (max-width: 991.98px){
         overflow:hidden !important;
+        transform: translateY(-1%);
     }
 `;
 const StyledSection = styled.section`
