@@ -18,7 +18,6 @@ const Container = styled.section`
         & > svg{
             width:100% !important;
             height: 100% !important;
-            preserveAspectRatio: none !important;
             @media (max-width: 991.98px){
                 overflow:hidden !important;
             }
