@@ -13,7 +13,7 @@ const StyledIFrame = styled.iframe`
 class Map extends React.Component{
     render(){
         return(
-            <StyledIFrame src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.9645368617585!2d14.530749816026082!3d53.41546037723289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa08dff51d3d2f%3A0x276ddf47c2c33ee7!2zUG93c3RhxYRjw7N3IMWabMSFc2tpY2ggNCwgNzAtMTAwIFN6Y3plY2lu!5e0!3m2!1spl!2spl!4v1633078932689!5m2!1spl!2spl" allowfullscreen="true" loading="lazy" title="mapka"></StyledIFrame>
+            <StyledIFrame src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9511.875766996665!2d14.5331626!3d53.4153816!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd3bc9a3d25a2804!2sGabinet%20podologiczno-kosmetyczny%20Wioleta%20Dzi%C4%99gelewska!5e0!3m2!1spl!2spl!4v1634828524564!5m2!1spl!2spl" allowfullscreen="true" loading="lazy" title="mapka"></StyledIFrame>
         );
     }
 }
