@@ -23,7 +23,7 @@ class About extends React.Component{
                 >
                     Moja praca to również moja pasja. Doświadczenia zebrane przez lata praktyki owocują pięknymi
 stopami moich zadowolonych Klientów. . Kocham swoją prace, gdyż uwielbiam przynosić ulgę
-bolącym stopą. Im bardziej wymagający przypadek, tym więcej mojego zaangażowania i satysfakcji z
+bolącym stopom. Im bardziej wymagający przypadek, tym więcej mojego zaangażowania i satysfakcji z
 wykonanej pracy. Moją misją jest, by ręce i stopy moich Klientek i Klientów były zdrowe oraz piękne.
 Swoją przygodę ze stopami zaczęłam jako kosmetyczka, ale w gabinecie zaczęły pojawiać się
 przypadki, które potrzebowały specjalistycznej pielęgnacji.<br></br><br></br>
@@ -33,7 +33,7 @@ mogąc zadbać o Twój wygląd stóp jak i dobre samopoczucie! Jeżeli w obrębi
 niepokojący problem i chcesz się go pozbyć, a przy okazji odzyskać komfort podczas chodzenia,
 skontaktuj się ze mną. Mój gabinet to miejsce, w którym uzyskasz pomoc, a Twoje stopy wrócą do
 formy i będziesz mógł się cieszyć ich nienagannym wyglądem. Do każdej osoby, która jest na fotelu
-podchodzę indywidualnie i staram, by czuła się komfortowo podczas zabiegu.
+podchodzę indywidualnie i staram się, by czuła się komfortowo podczas zabiegu.
 
                 </Container>
             </StyledSection>
