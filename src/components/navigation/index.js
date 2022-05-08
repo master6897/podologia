@@ -1,12 +1,27 @@
 import React from 'react';
 
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import stopki from '../../images/stopki.png';
+import stopki from '../../images/rds_logo_white_1.png';
 import Burger from './burger';
 import MobileMenu from './mobileMenu';
 
-
+const HeaderAnimation = keyframes`
+    from{
+        height: 15vh;
+    }
+    to{
+        height: 10vh;
+    }
+`;
+const HeaderSecondAnimation = keyframes`
+    from{
+        height: 10vh;
+    }
+    to{
+        height: 15vh;
+    }
+`;
 const Nav = styled.nav`
         display:flex;
         align-items:center;
@@ -21,8 +36,10 @@ const Nav = styled.nav`
         font-weight: 600;
         z-index: 1000;
         box-sizing: border-box;
-        ${props => props.scrolled && css`
-            height: 10vh;
+        ${props => props.scrolled ? css`
+            animation: ${HeaderAnimation} .5s forwards;
+        ` : css`
+            animation: ${HeaderSecondAnimation} .5s forwards;
         `}
     `;
 const LogoContainer = styled.div`
@@ -48,19 +65,20 @@ const LinksContainer = styled.div`
 const StyledLogo = styled.div`
         display: flex;
         align-items: center;
-        font-size: 1.3em;
-        justify-content: space-around;
-        font-family: Georgia, Serif;
+        flex-direction: column;
+        justify-content: center;
         padding: 0 1em;
         width:100%;
         height: 100%;
         color: inherit;
-        & > img{
-            width: 10%;
-            @media (max-width: 991.98px){
-                width: 10%;
-                margin-right: 1rem;
-            }
+        & p{
+            font-size: .7rem;
+        }
+        & h1{
+            margin: 0;
+            font-family: 'Style Script', cursive;
+            letter-spacing: 5px;
+        }
         }
 `;
 
@@ -109,11 +127,11 @@ class Navigation extends React.Component{
                 {this.props.scrolled === true ? 
                     <Nav scrolled>
                         <LogoContainer>
-                            <StyledLogo>
-                                <img src={stopki} alt="logo"></img>
-                                <p>WIOLETA DZIĘGELEWSKA</p>
-                            </StyledLogo>
                             <Burger open={this.state.open} onClick={this.openBurger}></Burger>
+                            <StyledLogo scrolled>
+                                {/*<img src={stopki} alt="logo"></img>*/}
+                                <h1>Raj dla Stóp</h1>
+                            </StyledLogo>
                             <MobileMenu open={this.state.open}>
                                     <StyledNavLink mobile to="/dashboard" activeClassName="anyClass" onClick={this.openBurger}>Strona główna</StyledNavLink>
                                     <StyledNavLink mobile to="/prices" activeClassName="anyClass" onClick={this.openBurger}>Cennik</StyledNavLink>
@@ -135,11 +153,12 @@ class Navigation extends React.Component{
                      : 
                     <Nav>
                         <LogoContainer>
-                            <StyledLogo>
-                                <img src={stopki} alt="logo"></img>
-                                <p>WIOLETA DZIĘGELEWSKA</p>
-                            </StyledLogo>
                             <Burger open={this.state.open} onClick={this.openBurger}></Burger>
+                            <StyledLogo>
+                                 {/*<img src={stopki} alt="logo"></img>*/}
+                                 <h1>Raj dla Stóp</h1>
+                                 <p>Podolog - Wioleta Dzięgelewska</p>
+                            </StyledLogo>
                             <MobileMenu open={this.state.open}>
                             <StyledNavLink mobile to="/dashboard" activeClassName="anyClass" onClick={this.openBurger}>Strona główna</StyledNavLink>
                                     <StyledNavLink mobile to="/prices" activeClassName="anyClass" onClick={this.openBurger}>Cennik</StyledNavLink>

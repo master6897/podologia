@@ -2,7 +2,6 @@ import React from 'react';
 
 import styled, {css} from 'styled-components';
 import Map from '../../shared/googleMap';
-import stopki from '../../../images/stopki.png';
 import ContactUs from '../../shared/form';
 
 const StyledSection = styled.section`
@@ -45,9 +44,8 @@ class ContactPage extends React.Component{
         return(
             <StyledSection>
                 <StyledDiv>
-                    <img src={stopki} width="10%" alt="logo"></img>
                     <h1>Wioleta Dzięgelewska</h1>
-                    <h2>Powstańców Śląskich 4/6, 70-100 Szczecin</h2>
+                    <h2>Willowa 8, 71-650 Szczecin</h2>
                     <h2>Kontakt telefoniczny: <StyledLink href="tel:509534864">509 534 864</StyledLink></h2>
                     <Map></Map>
                     </StyledDiv>

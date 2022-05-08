@@ -4,12 +4,12 @@ import styled, {css} from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { faFacebookSquare, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import stopki from '../../images/stopki.png';
+import stopki from '../../images/rds_logo_white_2.png';
 
 const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     background-color: #232629;
     color: #b8c2bb;
     width: 100%;
@@ -17,6 +17,7 @@ const StyledFooter = styled.footer`
     @media (max-width: 991.98px){
         flex-direction: column;
         padding: 2em 0;
+        align-items: center;
     }
 `;
 
@@ -28,7 +29,7 @@ const StyledDiv = styled.div`
     justify-content: space-around !important;
     align-items: center !important;
     ${props => props.social && css`
-        flex-direction: row;
+        height: 100%;
         margin-top: 1em;
     `};
     ${props => props.menu && css`
@@ -59,6 +60,7 @@ const StyledLink = styled.a`
          color: #D41e83;
          ${props => props.icon && css`
             color: inherit;
+            margin-bottom: 1rem;
          `};
 `;
 
@@ -82,9 +84,9 @@ const StyledH3 = styled.h3`
          top:0;
 `;
 const StyledImg = styled.img`
-         width: 20% !important;
+         width: 60% !important;
          @media (max-width: 991.98px){
-             width: 20% !important;
+             width: 60% !important;
          }
 `
 
@@ -94,9 +96,8 @@ class Footer extends React.Component{
             <StyledFooter>
                 <StyledDiv>
                     <StyledImg src={stopki} width="20%" alt="logo"></StyledImg>
-                    <h1>Wioleta Dzięgelewska</h1>
                 </StyledDiv>
-                <StyledDiv>
+                <StyledDiv social>
                     <StyledH3>Social Media</StyledH3>
                     <StyledLink icon target="blank" href="https://pl-pl.facebook.com/GabinetPodologicznyPasja/"><StyledFontAwesome facebook icon={faFacebookSquare}></StyledFontAwesome></StyledLink>
                     <StyledLink icon target="blank" href="https://pl-pl.facebook.com/GabinetPodologicznyPasja/"><StyledFontAwesome instagram icon={faInstagram}></StyledFontAwesome></StyledLink>
