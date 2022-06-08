@@ -10,8 +10,8 @@ const Container = styled.section`
     flex-direction: column !important;
     justify-content: center !important;
     align-items:center !important;
-    width: 100%;
-    height: 100vh;
+    width: 100% !important;
+    height: 100vh !important;
     overflow: hidden;
     ${props => props.svg && css`
         padding: 0 !important;
@@ -28,16 +28,16 @@ const Container = styled.section`
 `;
 
 const StyledVideo = styled.video`
-        min-height: 100%;
-        min-width: 100%;
-        object-fit: fill;
+        min-height: 100% !important;
+        min-width: 100% !important;
+        object-fit: fill !important;
 `;
 const StyledSection = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100vh !important;
     position: absolute;
     background: rgba(0,0,0,0.5);
     @media (max-width: 991.98px){
