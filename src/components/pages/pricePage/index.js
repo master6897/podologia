@@ -2,8 +2,8 @@ import React from 'react';
 
 import Card from '../../shared/Card';
 import Container from '../../shared/Container';
-import styled from 'styled-components';
-import bath from '../../../images/bath.jpg';
+import styled, {css} from 'styled-components';
+import bath from '../../../images/bath.png';
 
 
 const StyledContainer = styled.section`
@@ -16,46 +16,96 @@ const StyledContainer = styled.section`
     width: 100%;
 `;
 
-const StyledLi = styled.li`
-    margin: .5em 0;
+const StyledWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    & span.descr{
+        width: 70%;
+        text-align: left;
+    }
+    & span.price{
+        width: 30%;
+        text-align: right;
+        font-weight: 500;
+    }
+    ${props => props.break && css`
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #D41e83;
+    `}
 `;
 class PricePage extends React.Component{
     render(){
         return(
             <StyledContainer>
-                <Card
-                    title="Leczenie stóp"
-                >
-                    <StyledLi>Opatrunek zwykły/stały: 50-80 zł</StyledLi>
-                    <StyledLi>Opatrunek (stan zapalny): 60 zł</StyledLi>
-                    <StyledLi>Opracowanie pięt: 70 zł</StyledLi>
-                    <StyledLi>Opatrunek paznokcia: 80-90 zł</StyledLi>
-                    <StyledLi>Rekonstrukcja paznokcia: 90 zł</StyledLi>
-                    <StyledLi>Paznokieć grzybiczny: 90-150 zł</StyledLi>
-                    <StyledLi>Paznokieć wrastający (stan zapalny): 110-160 zł</StyledLi>
-                    <StyledLi>Odcisk: 50-80 zł</StyledLi>
-                    <StyledLi>Modzele: 50-80 zł</StyledLi>
-                    <StyledLi>Pękające pięty (opracowanie skalpelem, frezarka): 100 zł</StyledLi>
-                    <StyledLi>Brodawki wirusowe (leczenie kwasem): 80 zł</StyledLi>
-                </Card>
-                <Card
-                    title="Pielegnacja stóp"
-                >
-                    <StyledLi>Malowanie paznokci bez opracowania: 30 zł</StyledLi>
-                    <StyledLi>Pedicure kosmetyczny: 110 zł</StyledLi>
-                    <StyledLi>Pedicure kosmetyczny + malowanie hybrydą: 150 zł</StyledLi>
-                    <StyledLi>Pedicure malowanie + lakier: 130 zł</StyledLi>
-                    <StyledLi>Pedicure medyczny: 140-160 zł</StyledLi>
-                </Card>
-                <Card
-                    title="Pielęgnacja dłoni"
-                >
-                    <StyledLi>Manicure bez malowania: 40 zł</StyledLi>
-                    <StyledLi>Manicure z malowaniem lakierem: 60 zł</StyledLi>
-                    <StyledLi>Manicure hybryda: 110 zł</StyledLi>
-                    <StyledLi>Plus french/zdobienie paznokci: 20-60 zł</StyledLi>
-                    <StyledLi>Ściągnięcie żelu/hybrydy: 30-60 zł</StyledLi>
-                    <StyledLi>Parafina na dłonie (peeling, maska): 60 zł</StyledLi>
+                <Card>
+                    <StyledWrapper>
+                        <span className='descr'>Pedicure kosmetyczny</span>
+                        <span className='price'>120 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Pedicure kosmetyczny z lakierem</span>
+                        <span className='price'>140 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Pedicure kosmetyczny z hybrydą</span>
+                        <span className='price'>150 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper break>
+                        <span className='descr'>Hybryda bez opracowania podeszwy stóp</span>
+                        <span className='price'>80 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Pedicure medyczny</span>
+                        <span className='price'>150 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Pedicure medyczny z hybrydą</span>
+                        <span className='price'>180 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper break>
+                        <span className='descr'>Pedicure medyczny rozszerzony</span>
+                        <span className='price'>190 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Usunięcie jednego modzela, odcisku</span>
+                        <span className='price'>50 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Oprocowanie przerośnietych lub zmienionych chorobowo paznokci</span>
+                        <span className='price'>120 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Oprocowanie jendego paznokcia zmienionego chorobowo</span>
+                        <span className='price'>50-80 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Podcięcie wyrastającego paznokcia</span>
+                        <span className='price'>70 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Opracowanie pękających pięt</span>
+                        <span className='price'>120 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Klamra tytanowa</span>
+                        <span className='price'>160 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Założenie tamponady</span>
+                        <span className='price'>30 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Ewakuacja krwiaka podpaznokciowego</span>
+                        <span className='price'>80 zł</span>
+                    </StyledWrapper>
+                    <StyledWrapper>
+                        <span className='descr'>Rekonstrukcja paznokcia</span>
+                        <span className='price'>100 zł</span>
+                    </StyledWrapper>
                 </Card>
                 <Container
                     title={"Przed wizytą w gabinecie przygotuj się!"}

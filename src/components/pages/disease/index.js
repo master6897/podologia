@@ -49,7 +49,7 @@ const StyledH2 = styled.h2`
     }
 `;
 const StyledH4 = styled.h4`
-    color: #000b76;
+    color: #493657;
 `;
 
 

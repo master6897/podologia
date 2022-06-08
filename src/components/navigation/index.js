@@ -1,8 +1,8 @@
 import React from 'react';
 
 import styled, {css, keyframes} from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import stopki from '../../images/rds_logo_white_1.png';
+import { NavLink} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Burger from './burger';
 import MobileMenu from './mobileMenu';
 
@@ -12,6 +12,7 @@ const HeaderAnimation = keyframes`
     }
     to{
         height: 10vh;
+        background-color:#d577b5;
     }
 `;
 const HeaderSecondAnimation = keyframes`
@@ -20,13 +21,13 @@ const HeaderSecondAnimation = keyframes`
     }
     to{
         height: 15vh;
+        background: trasparent;
     }
 `;
 const Nav = styled.nav`
         display:flex;
         align-items:center;
         justify-content:space-around;
-        background-color:#000b76;
         height: 15vh;
         width: 100%;
         position: fixed;
@@ -40,6 +41,11 @@ const Nav = styled.nav`
             animation: ${HeaderAnimation} .5s forwards;
         ` : css`
             animation: ${HeaderSecondAnimation} .5s forwards;
+        `}
+        ${props => props.home === true ? css`
+            background: transparent;
+        ` : css`
+            background-color:#d577b5;
         `}
     `;
 const LogoContainer = styled.div`
@@ -94,7 +100,7 @@ export const StyledNavLink = styled(NavLink)`
          transition: 0.3s ease;
          &:hover{
             transform: scale(1.02);
-            color: #D41e83;
+            color: #493657;
          }
          &${props => props.mobile && css`
             width: 80%;
@@ -122,10 +128,11 @@ class Navigation extends React.Component{
         this.setState({open: !this.state.open});
     }
     render(){
+        const {location} = this.props;
         return(
             <>
                 {this.props.scrolled === true ? 
-                    <Nav scrolled>
+                    <Nav scrolled home={location.pathname === '/dashboard' ? true : false}>
                         <LogoContainer>
                             <Burger open={this.state.open} onClick={this.openBurger}></Burger>
                             <StyledLogo scrolled>
@@ -151,7 +158,7 @@ class Navigation extends React.Component{
                         </LinksContainer>
                     </Nav>
                      : 
-                    <Nav>
+                    <Nav home={location.pathname === '/dashboard' ? true : false}>
                         <LogoContainer>
                             <Burger open={this.state.open} onClick={this.openBurger}></Burger>
                             <StyledLogo>
@@ -182,4 +189,4 @@ class Navigation extends React.Component{
     }
 }
 
-export default Navigation;
+export default withRouter(Navigation);

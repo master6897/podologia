@@ -43,7 +43,7 @@ const StyledLink = styled.a`
 const StyledImg = styled.img`
     width: 100%;
     ${props => props.about && css`
-        width: 70%;
+        width: 60%;
     `}
 `;
 

@@ -52,7 +52,7 @@ export const StyledNavLink = styled(NavLink)`
          transition: 0.3s ease;
          &:hover{
             transform: scale(1.02);
-            color: #D41e83;
+            color: white;
          }
 `;
 const StyledLink = styled.a`

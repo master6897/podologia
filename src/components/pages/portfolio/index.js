@@ -72,7 +72,7 @@ const StyledImgDiv = styled.div`
 const StyledH2 = styled.h2`
     color: #D41e83;
     ${props => props.title && css`
-        color: #000b76;
+        color: #493657;
     `}
 `
 

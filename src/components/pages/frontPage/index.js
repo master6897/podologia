@@ -2,15 +2,17 @@ import React from 'react';
 
 import styled, {css} from 'styled-components';
 import Button from '../../button';
-import Noga from '../../../images/Noga.png';
+import gabinetVideoOgg from '../../../videos/gabinetOgm.ogg';
+import gabinetVideoMov from '../../../videos/gabinet_mov.mov';
 
 const Container = styled.section`
-    padding-top: 15vh;
     display:flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items:center !important;
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
     ${props => props.svg && css`
         padding: 0 !important;
         margin: 0 !important;
@@ -24,20 +26,20 @@ const Container = styled.section`
         }
     `}
 `;
-const StyledSVG = styled.svg`
-    width:100% !important;
-    display: block !important;
-    @media (max-width: 991.98px){
-        overflow:hidden !important;
-        transform: translateY(-1%);
-    }
+
+const StyledVideo = styled.video`
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: fill;
 `;
 const StyledSection = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background-color:#000b76;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
     @media (max-width: 991.98px){
         flex-direction: column;
     }
@@ -45,7 +47,9 @@ const StyledSection = styled.section`
 const StyledArticle = styled.article`
     display: flex;
     flex-direction: column;
-    width: 30%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 40%;
     padding: 0 1em;
     @media (max-width: 991.98px){
         width: 70%;
@@ -71,33 +75,28 @@ const StyledParagraph = styled.p`
     text-align: left;
     margin-top: 2em;
 `;
-const StyledLink = styled.a`
-    text-decoration: none;
-    color: #D41e83;
-`;
-const StyledImg = styled.img`
-    width: 100%;
-`;
 
-class FrontPage extends React.Component{
-    render(){
+const FrontPage = () => {
         return(
             <Container>
+                <StyledVideo 
+                muted 
+                autoPlay 
+                playsInline
+                loop>
+                    <source src={gabinetVideoMov} type='video/mp4'/>
+                    <source src={gabinetVideoOgg} type='video/ogg'/>
+                    
+                </StyledVideo>
                 <StyledSection>
                     <StyledArticle margin>
                         <StyledH1>Zadbaj ze mną o zdrowie swoich stóp!</StyledH1>
                         <StyledParagraph>Regularne wizyty w gabinecie podologicznym zmniejszają ryzyko poważnych dolegliwości</StyledParagraph>
                         <Button name="Umów wizytę!" link="/contact"></Button>
                     </StyledArticle>
-                    <StyledArticle picture>
-                        <StyledImg src={Noga} alt="noga"></StyledImg>
-                        <StyledLink href='https://www.freepik.com/vectors/woman'>Woman vector created by pch.vector - www.freepik.com</StyledLink>
-                    </StyledArticle>
                 </StyledSection>
-                    <StyledSVG xmlns="http://www.w3.org/2000/svg" overflow="hidden" viewBox="0 0 1440 320" preserveAspectRatio="none"><path fill="#000b76" fillOpacity="1" d="M0,96L30,85.3C60,75,120,53,180,53.3C240,53,300,75,360,85.3C420,96,480,96,540,106.7C600,117,660,139,720,133.3C780,128,840,96,900,74.7C960,53,1020,43,1080,53.3C1140,64,1200,96,1260,106.7C1320,117,1380,107,1410,101.3L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></StyledSVG>
             </Container>
         );
-    }
 }
 
 export default FrontPage;

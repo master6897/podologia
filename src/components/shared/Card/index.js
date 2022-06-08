@@ -2,17 +2,14 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const StyledContainer = styled.section`
+const StyledContainer = styled.fieldset`
     display: flex;
     align-items:center;
     justify-content: space-around;
     flex-wrap: wrap;
     box-shadow: 0 40px 40px rgb(0 0 0 / 16%);
-    width: 24%;
+    width: 50%;
     padding: 2em;
-    height: 30vh;
-    overflow: scroll;
-    overflow-x: hidden;
     margin: 2em 0;
     transition: 0.3s ease;
     &:hover{
@@ -26,6 +23,11 @@ const StyledContainer = styled.section`
         width: 70%;
         height: auto;
     }
+    & legend{
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: left;
+    }
 `;
 
 const StyledArticle = styled.article`
@@ -37,11 +39,6 @@ const StyledArticle = styled.article`
 const StyledTitle = styled.h1`
     font-family: Georgia, Serif;
     font-size: 1.3em;
-    border-bottom: 2px solid #D41e83;
-`;
-
-const StyledUl = styled.ul`
-    text-align: left;
 `;
 
 
@@ -49,9 +46,10 @@ class Card extends React.Component{
     render(){
         return(
             <StyledContainer>
+                <legend>Cennik</legend>
                 <StyledArticle>
                     <StyledTitle>{this.props.title}</StyledTitle>
-                    <StyledUl>{this.props.children}</StyledUl>
+                    {this.props.children}
                 </StyledArticle>
             </StyledContainer>
         );

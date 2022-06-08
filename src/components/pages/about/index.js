@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 import Container from '../../shared/Container';
-import picture from '../../../images/Wioleta.jpeg';
+import picture from '../../../images/Wioleta.jpg';
 
 const StyledSection = styled.section`
     display: flex;
