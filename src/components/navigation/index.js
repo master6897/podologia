@@ -8,19 +8,19 @@ import MobileMenu from './mobileMenu';
 
 const HeaderAnimation = keyframes`
     from{
-        height: 15vh;
+        height: 8vh;
     }
     to{
-        height: 10vh;
+        height: 5vh;
         background-color:#d577b5;
     }
 `;
 const HeaderSecondAnimation = keyframes`
     from{
-        height: 10vh;
+        height: 5vh;
     }
     to{
-        height: 15vh;
+        height: 8vh;
         background: trasparent;
     }
 `;
@@ -164,7 +164,7 @@ class Navigation extends React.Component{
                             <StyledLogo>
                                  {/*<img src={stopki} alt="logo"></img>*/}
                                  <h1>Raj dla Stóp</h1>
-                                 <p>Podolog - Wioleta Dzięgelewska</p>
+                                 <p>Podolog - Wioleta Puc</p>
                             </StyledLogo>
                             <MobileMenu open={this.state.open}>
                             <StyledNavLink mobile to="/dashboard" activeClassName="anyClass" onClick={this.openBurger}>Strona główna</StyledNavLink>

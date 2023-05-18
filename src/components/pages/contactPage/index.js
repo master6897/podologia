@@ -44,7 +44,7 @@ class ContactPage extends React.Component{
         return(
             <StyledSection>
                 <StyledDiv>
-                    <h1>Wioleta Dzięgelewska</h1>
+                    <h1>Wioleta Puc</h1>
                     <h2>Willowa 8, 71-650 Szczecin</h2>
                     <h2>Kontakt telefoniczny: <StyledLink href="tel:509534864">509 534 864</StyledLink></h2>
                     <Map></Map>
