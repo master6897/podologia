@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import { faFacebookSquare, faInstagram} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import stopki from '../../images/rds_logo_white_2.png';
+import stopki from '../../images/rds_logo_white_1.png';
 
 const StyledFooter = styled.footer`
     display: flex;
@@ -84,7 +84,7 @@ const StyledH3 = styled.h3`
          top:0;
 `;
 const StyledImg = styled.img`
-         width: 60% !important;
+         width: 100% !important;
          @media (max-width: 991.98px){
              width: 60% !important;
          }
